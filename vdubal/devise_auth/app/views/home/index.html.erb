@@ -1,0 +1,7 @@
+<% if user_signed_in? %>
+	<h1>Text for logged in users</h1>
+<% end %>
+
+<% if !user_signed_in? %>
+	<h1>Text for non-logged in users</h1>
+<% end %>

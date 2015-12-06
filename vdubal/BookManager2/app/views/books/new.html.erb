@@ -1,0 +1,31 @@
+<div class="container well margin-top-20 small-container">
+
+	<%= form_for @book do |f| %>
+	
+	<div class="bold margin-top-20">
+		Title
+	</div>
+	<div class="margin-top-20">
+		<%= f.text_field :title %>
+	</div>
+	<div class="bold margin-top-20">
+		Author
+	</div>
+	<div class="margin-top-20">
+		<%= f.text_field :author %>
+	</div>
+	<div class="bold margin-top-20">
+		Image
+	</div>
+	<div class="margin-top-20">
+		<%= f.text_field :image %>
+	</div>
+
+
+	<div class="margin-top-20">
+		<a href="/students" class="btn btn-default">Cancel</a>
+		<button type="submit" class="btn btn-success">Save</button>
+	</div>
+	<% end %>
+	
+</div>

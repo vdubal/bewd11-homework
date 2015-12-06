@@ -1,0 +1,51 @@
+<div class="container">
+	<h1>Student Name: 
+        <%= @student.name %>
+    </h1>
+</div>
+<div class="container margin-top-20">
+	<table class="table striped">
+		<thead>
+			<th><%= @student.name %>  is currently enrolled in these courses</th>
+			<th></th>
+		</thead>
+
+		<tbody>
+		    <% @enrolled_courses.each do |enr| %> 
+			<tr>
+				<td>
+					<%= enr.name %>
+				</td>
+			</tr>
+			<% end %>
+		<tr><td>
+<%= form_tag do %> 
+<%= collection_select(:student, :course, Course.all, :id, :name, {selected: Student.find(params[:id]).courses.ids }, {multiple: true}) %> 
+</td>
+<tr>
+<td>
+<%= submit_tag("Save Enrollments") %> 
+</td>
+</tr>
+<% end %> 
+<tr>
+<td>
+	<%= form_tag("/enrollments", method: "DELETE") do %>
+	<div class="margin-top-20">
+    <%= submit_tag("Delete Enrollments") %> 
+	<% end %>  
+</td>
+</tr>
+
+
+		</tbody>
+	</table>
+</div>
+
+
+
+
+
+
+
+

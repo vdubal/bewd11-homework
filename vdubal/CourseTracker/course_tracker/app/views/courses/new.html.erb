@@ -1,21 +1,21 @@
 
+<div class="container well margin-top-20 small-container">
 
-<%= form_for @course do |f| %>
-	<div class="container">
-		<div>
-		
-			<div class="bold">
-			Add Course
-		</div>
-		
-			<%= f.text_field :name, class: "form-control" %>
-		</div>
-			<%= f.submit(class: "btn btn-primary") %>
-							
-			
-		</div>
+	<%= form_for @course do |f| %>
+	
+	<div class="bold margin-top-20">
+	Course Name
 	</div>
-<% end %>
-
+	<div class="margin-top-20">
+		<%= f.text_field :name %>
+	</div>
+	
+	<div class="margin-top-20">
+		<a href="/students" class="btn btn-default">Cancel</a>
+		<button type="submit" class="btn btn-success">Save</button>
+	</div>
+	<% end %>
+	
+</div>
 
 

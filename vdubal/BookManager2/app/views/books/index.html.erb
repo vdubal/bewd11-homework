@@ -1,0 +1,26 @@
+	
+	
+	<a href="<%= new_book_path %>" class="btn btn-default">Add Book</a>
+	
+	<% @books.each do |book| %>
+	
+	<div class="row margin-top-20 wine-container">
+		<div class="col-sm-3">
+			<img src="<%= book.image %>" class="img-responsive" />
+		</div>
+		<div class="col-sm-9">
+			<div class="margin-top-20">
+				<span class="bold">Title: </span><span><%= book.title %></span>
+			</div>
+			<div>
+				<span class="bold">Author: </span><span><%= book.author %></span>
+			</div>
+			<div class="margin-top-20">
+				<a href="<%= book_stores_path(book.id) %>" class="btn btn-default">Stores</a>
+			</div>			
+			<div class="margin-top-20">
+				<a href="<%= edit_book_path(book.id) %>" class="btn btn-default">Edit Book</a>
+			</div>
+		</div>
+	</div>
+	<% end %>

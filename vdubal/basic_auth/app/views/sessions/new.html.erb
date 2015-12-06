@@ -1,0 +1,9 @@
+<% if flash[:error] %>
+	<h3><%= flash[:error] %></h3>
+<% end %>
+
+<%= form_tag(sessions_path) do %>
+	<%= text_field :session, :email_address, placeholder: "Email Address" %>
+	<%= password_field :session, :password, placeholder: "Password" %>
+	<%= submit_tag %>
+<% end %>

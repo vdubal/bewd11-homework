@@ -1,0 +1,33 @@
+<div class="container well margin-top-20 small-container">
+	<div>
+		<a href="/students"><< Go Back</a>
+	</div>
+		    <%= form_for(@student, method: "PUT") do |f| %> 
+		
+		<div class="bold">
+			Student Name
+		</div>
+		<div class="margin-top-20">
+				    <%= f.text_field :name %>
+		</div>
+		
+				<div class="margin-top-20 txt-right">
+			<a href="#" class="btn btn-default">Cancel</a>
+			<button type="submit" class="btn btn-primary">Edit User</button>
+			
+			
+            <%= form_tag(student_path(@student.id), method: "DELETE") do %>
+            <button type="submit" class="btn btn-danger">Delete User</button>
+            <% end %>
+			
+			
+			
+			
+		</div>
+		
+		
+
+			<% end %> 
+		</tbody>
+	</table>
+</div>

@@ -5,8 +5,8 @@ Rails.application.routes.draw do
 	
 	resources :students do
 		member do #associate an enrollment with a student
-			get :enrollments
-			post :enrollments
+			get "/enrollments" => "enrollments#new"
+			post "/enrollments" => "enrollments#create"
 			delete :enrollments
 		end
 	end

@@ -1,21 +1,24 @@
 
+<div class="container well margin-top-20 small-container">
 
-<%= form_for @student do |f| %>
-	<div class="container">
-		<div>
-		
-			<div class="bold">
-			Student Name
-		</div>
-		
-			<%= f.text_field :name, class: "form-control" %>
-		</div>
-			<%= f.submit(class: "btn btn-primary") %>
-							
-			
-		</div>
+	<%= form_for @student do |f| %>
+	
+	<div class="bold margin-top-20">
+		Store name
 	</div>
-<% end %>
+	<div class="margin-top-20">
+		<%= f.text_field :name %>
+	</div>
+	<div class="margin-top-20">
+		<a href="/books" class="btn btn-default">Cancel</a>
+		<button type="submit" class="btn btn-success">Save</button>
+	</div>
+	<% end %>
+	
+</div>
+
+
+
 
 
 
